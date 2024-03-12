@@ -46,7 +46,17 @@ class BasicMathOperations:
         c = math.sqrt(self.calculateSquare(a) + self.calculateSquare(b))
         return c
     
+    def areaofRectangle(self, width, height):
+       return height*width
+   
+    def powerofNumber(self, base, exponent):
+        return base**exponent
     
+    def typeofArgument(self, argument):
+        return type(argument)
+    
+   
+        
         
             
     
