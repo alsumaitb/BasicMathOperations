@@ -1,5 +1,6 @@
 # Assignment 05, BasicMathOperations
 
+import math
 class BasicMathOperations:
     
     def greetUser(self, firstname, lastname):
@@ -32,7 +33,24 @@ class BasicMathOperations:
             result = integer*result
         return result
     
+    def counting(self):
+        start = int(input("Enter first number: "))
+        end = int(input("Enter second number: "))
+        for i in range(start, end+1):
+            print(i)
+            
+    def calculateSquare(self, num):
+        return num**2 
     
+    def calculateHypotenuse(self, a, b):
+        c = math.sqrt(self.calculateSquare(a) + self.calculateSquare(b))
+        return c
+    
+    
+        
+            
+    
+        
             
         
     
