@@ -61,6 +61,7 @@ def main():
     while True:
     
         print("1. Greet User\n2. Add number\n3. Perform Operation\n4. Square number\n5. Factorial\n6. Counting\n7. Calculate Hypotenuse\n8. Rectangle Area\n9. Power of Number\n10. Type of Argument\n11. Nothing")
+        print()
         user_choice = input("Pick the task number you would like to execute: ")
        
         if user_choice == "1":
@@ -69,21 +70,26 @@ def main():
             bmo.greetUser(firstname, lastname)
        
         elif user_choice == "2":
-            bmo.addNumbers()
+            summ = bmo.addNumbers()
+            print(summ)
         
         elif user_choice == "3":
             num1 = int(input("Enter first number: "))
             num2 = int(input("Enter second number: "))
             operator = input("Enter math operator(+,-,*,/): ")
-            bmo.performOperation(num1, num2, operator)
+            result = bmo.performOperation(num1, num2, operator)
+            print(result)
        
         elif user_choice == "4":
             num = int(input("Enter number: "))
-            bmo.squareNumber(num)
+            result = bmo.squareNumber(num)
+            print(result)
+            
         
         elif user_choice == "5":
             num = int(input("Enter number: "))
-            bmo.factorial(num)
+            result = bmo.factorial(num)
+            print(result)
        
         elif user_choice == "6":
             bmo.counting()
@@ -91,27 +97,34 @@ def main():
         elif user_choice == "7":
             a = int(input("Enter a of right triangle: "))
             b = int(input("Enter b of right triangle: "))
-            bmo.calculateHypotenuse(a, b)
+            c = bmo.calculateHypotenuse(a, b)
+            
+            print(f"The hypotenuse of {a} and {b} is {c}.")
         
         elif user_choice == "8":
             width = int(input("Enter width of rectangle: "))
             height = int(input("Enter height of rectangle: "))
-            bmo.areaofRectangle(width, height)
+            result = bmo.areaofRectangle(width, height)
+            print(result)
         
         elif user_choice == "9":
             base = int(input("Enter base: "))
             exponent = int(input("Enter exponent: "))
-            bmo.powerofNumber(base, exponent)
+            result = bmo.powerofNumber(base, exponent)
+            print(result)
         
         elif user_choice == "10":
             argument = input("Enter any data type: ")
-            bmo.typeofArgument(argument)
+            result = bmo.typeofArgument(argument)
+            print(result)
        
         elif user_choice == "11":
             break
        
         else:
             print("Invalid choice")
+            
+main()
             
         
    
