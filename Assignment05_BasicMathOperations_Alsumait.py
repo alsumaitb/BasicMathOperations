@@ -11,4 +11,29 @@ class BasicMathOperations:
         
         return user_prompt_1 + user_prompt_2
     
+    def performOperation(self, num1, num2, operator):
+        if operator == "+":
+            return num1 + num2
+        elif operator == "-":
+            return num1 - num2
+        elif operator == "*":
+            return num1*num2
+        elif operator == "/":
+            return num1/num2
+        else:
+            print("Invalid operator")
+            
+    def squareNumber(self, num):
+        return num**2 
+    
+    def factorial(self,num):
+        result = 1
+        for integer in range(num,1,-1):
+            result = integer*result
+        return result
+    
+    
+            
+        
+    
     
